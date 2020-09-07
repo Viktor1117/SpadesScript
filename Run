@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH -A snic2020-15-186
+#SBATCH -p core
+#SBATCH -n 15
+#SBATCH -t 10:00:00
+#SBATCH -J Shannon
+  
+$ CelegansSample1
+singularity exec /proj/snic2020-15-186/LinusBenchmark/Containers/Spades_latest.sif spades.py -1 /proj/snic2020-15-186/LinusBenchmark/data/Celegans/sample1/CelegansSample1Left.fastq.gz -2 right /proj/snic2020-15-186/LinusBenchmark/data/Celegans/sample1/CelegansSample1Right.fastq.gz -o /proj/snic2020-15-186/LinusBenchmark/output/outputSpades/Celegans/sample1/
+
+$ CelegansSample2
+singularity exec /proj/snic2020-15-186/LinusBenchmark/Containers/Spades_latest.sif spades.py -1 /proj/snic2020-15-186/LinusBenchmark/data/Celegans/sample2/CelLeft1.fastq.gz -2 right /proj/snic2020-15-186/LinusBenchmark/data/Celegans/sample2/Celright2.fastq.gz -o /proj/snic2020-15-186/LinusBenchmark/output/outputSpades/Celegans/sample2/
+
